@@ -28,7 +28,7 @@ Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/mai
 2. You can hug someone if you mention him/her. You want a hug if you want to hug yourself or no one.
 3. You can create different interactions easily, just open in the DBM the [Run Script] action, and change the urls.
 
-( Don't forget renaming the embed titles too. 😉 )
+( Don't forget renaming the embed titles and the command names too. 😉 )
 
 <!--
 **ForestTea/foresttea** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
