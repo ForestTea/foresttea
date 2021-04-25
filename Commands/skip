@@ -1,0 +1,98 @@
+
+{
+  "name": "skip",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "qFNbO",
+  "actions": [
+    {
+      "info": "1",
+      "find": "bot_commands",
+      "storage": "1",
+      "varName": "bot_room",
+      "name": "Find Channel"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "info": "13",
+      "storage": "1",
+      "varName": "titlee",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "15",
+      "storage": "1",
+      "varName": "thumbna",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "12",
+      "storage": "1",
+      "varName": "next tt",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "title": "𝗦𝗸𝗶𝗽𝗽𝗲𝗱 𝘀𝗼𝗻𝗴",
+      "author": "",
+      "color": "",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"thumbna\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "**${tempVars(\"name\")}** skipped this song:\n**${tempVars(\"titlee\")}**\n\nNow playing:\n**${tempVars(\"next tt\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "amount": "1",
+      "name": "Skip Queue"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ]
+}
