@@ -1,0 +1,428 @@
+
+{
+  "name": "play",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "QbdfF",
+  "actions": [
+    {
+      "info": "1",
+      "find": "bot_commands",
+      "storage": "1",
+      "varName": "bot_channel",
+      "name": "Find Channel"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "0",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "4",
+      "iftrueVal": "0",
+      "iffalse": "0",
+      "iffalseVal": "test_queue",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "iftrue": "4",
+      "iftrueVal": "test_queue",
+      "iffalse": "4",
+      "iffalseVal": "no_voice",
+      "name": "Check If Member"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "no_voice",
+      "color": "#00ff00",
+      "description": "You are not in the voice channel",
+      "name": "Create Anchor"
+    },
+    {
+      "channel": "5",
+      "varName": "bot_channel",
+      "message": "**${tempVars(\"name\")}** you are not in the voice channel little fish.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "0",
+      "color": "#00ff00",
+      "description": "You are not sayd anything after the play command",
+      "name": "Create Anchor"
+    },
+    {
+      "server": "0",
+      "info": "13",
+      "storage": "1",
+      "varName": "playing_now",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "14",
+      "storage": "1",
+      "varName": "current_time",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "storage": "1",
+      "varName": "playing_now",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "5",
+      "varName": "bot_channel",
+      "message": "Right now we playing : **${tempVars(\"playing_now\")}**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "5",
+      "varName": "bot_channel",
+      "message": "**${tempVars(\"name\")}** please name or link the music, like \"Baby Shark Song\".",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "test_queue",
+      "color": "#00ff00",
+      "description": "If a music already playing, putting in the queue.",
+      "name": "Create Anchor"
+    },
+    {
+      "server": "0",
+      "info": "1",
+      "storage": "1",
+      "varName": "bot_play",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "storage": "1",
+      "varName": "bot_play",
+      "comparison": "0",
+      "value": "1000",
+      "iftrue": "4",
+      "iftrueVal": "Queue",
+      "iffalse": "4",
+      "iffalseVal": "In_Voice",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "In_Voice",
+      "color": "#00ff40",
+      "description": "If you in voice channel, the command continue.",
+      "name": "Create Anchor"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "title/link",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "5",
+      "varName": "bot_channel",
+      "message": "🔎 **Searching for your song...**\n",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "code": "const scrapeYt = require(\"scrape-yt\");\nscrapeYt.search(`${tempVars(\"title/link\")}`, {\n    type: \"video\"\n}).then(videos => {\n    console.log(videos[0]);\n\n  Actions.storeValue(videos[0].id, 1, \"url1\", cache);\n  Actions.storeValue(videos[0].title, 1, \"title\", cache);\n  Actions.storeValue(videos[0].thumbnail, 1, \"thumbnail\", cache);\n  Actions.storeValue(videos[0].duration, 1, \"duration\", cache);\n});",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check is Bot in Voice Channel"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=${tempVars(\"url1\")}",
+      "seek": "0",
+      "volume": "",
+      "passes": "1",
+      "bitrate": "",
+      "type": "0",
+      "name": "Play YouTube Video"
+    },
+    {
+      "title": "▶️ I Found your song!",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"thumbnail\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "time": "${tempVars(\"duration\")}",
+      "storage": "1",
+      "varName": "time_left",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"title\")}**\n\nI found your song! **${tempVars(\"name\")}**\nIn the queue : **// Now Playing // **\nSong duration : **${tempVars(\"time_left\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "bot_channel",
+      "storage3": "0",
+      "varName3": "nowplaying",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "Queue",
+      "color": "#00ff00",
+      "description": "Different writing for the queue.",
+      "name": "Create Anchor"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "title/link",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "5",
+      "varName": "bot_channel",
+      "message": "🎶 **Adding your song to the queue...**\n",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "code": "const scrapeYt = require(\"scrape-yt\");\nscrapeYt.search(`${tempVars(\"title/link\")}`, {\n    type: \"video\"\n}).then(videos => {\n    console.log(videos[0]);\n\n  Actions.storeValue(videos[0].id, 1, \"url1\", cache);\n  Actions.storeValue(videos[0].title, 1, \"title\", cache);\n  Actions.storeValue(videos[0].thumbnail, 1, \"thumbnail\", cache);\n  Actions.storeValue(videos[0].duration, 1, \"duration\", cache);\n});",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "server": "0",
+      "info": "5",
+      "storage": "2",
+      "varName": "already_playing",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${serverVars(\"already_playing\")}",
+      "defaultVal": "0",
+      "storage": "2",
+      "varName2": "music_list",
+      "name": "Store Server Data"
+    },
+    {
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check is Bot in Voice Channel"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=${tempVars(\"url1\")}",
+      "seek": "0",
+      "volume": "",
+      "passes": "1",
+      "bitrate": "",
+      "type": "0",
+      "name": "Play YouTube Video"
+    },
+    {
+      "title": "🎧 Song added to the queue!",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"thumbnail\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**${tempVars(\"title\")}**\nIn the queue: **${serverVars(\"already_playing\")+1}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "bot_channel",
+      "storage3": "0",
+      "varName3": "nowplaying",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ]
+}
