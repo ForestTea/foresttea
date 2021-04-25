@@ -14,6 +14,7 @@ But the most important : **For me all of this works. If it's not works for you, 
 2. You need to install the [scrape-yt](https://www.npmjs.com/package/scrape-yt) module into your bot project folder.
 3. In your Discord Bot Maker program, go to the top right and [install FFMPEG](https://i.ibb.co/rFNLxS3/install-FFMPEG.png) and [update Music Libraries](https://i.ibb.co/f2mKX2Y/update-musiclibraries.png).
 4. Now you can collect the raw data for the commands, and for the events. ( Don't forget restarting your bot after the first 3 step. )
+
 Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/play)
 Skip command: [skip](https://github.com/ForestTea/foresttea/blob/main/Commands/skip)
 Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/main/Events/NewMusic)
