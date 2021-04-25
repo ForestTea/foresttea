@@ -4,7 +4,7 @@ I'm mostly going to share my Discord Bot Maker RawData-s with those who want it.
 
 But the most important : **For me all of this works. If it's not works for you, then download the latest mods for DBM.**
 
-( Or you probably need to buy it. )
+( Or you probably need to buy the Discord Bot Maker. )
 
 <!--
 **ForestTea/foresttea** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
