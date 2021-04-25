@@ -24,7 +24,7 @@ Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/mai
 
 
 **Interactions with members**
-1. Just go to the [Hug](https://github.com/ForestTea/foresttea/blob/main/Commands/hug) and copy raw data, create new command in your DBM, and edit raw data and paste it.
+1. Just go to the [hug](https://github.com/ForestTea/foresttea/blob/main/Commands/hug) and copy raw data, create new command in your DBM, and edit raw data and paste it.
 2. You can hug someone if you mention him/her. You want a hug if you want to hug yourself or no one.
 3. You can create different interactions easily, just open in the DBM the [Run Script] action, and change the urls.
 
