@@ -1,0 +1,118 @@
+
+{
+  "name": "Joining Message",
+  "temp": "member",
+  "event-type": "6",
+  "_id": "pIBeX",
+  "actions": [
+    {
+      "info": "0",
+      "find": "832031157373108264",
+      "storage": "1",
+      "varName": "server",
+      "name": "Find Server"
+    },
+    {
+      "info": "1",
+      "find": "welcome",
+      "storage": "1",
+      "varName": "welcome_room",
+      "name": "Find Channel"
+    },
+    {
+      "info": "1",
+      "find": "free_chatting",
+      "storage": "1",
+      "varName": "free_room",
+      "name": "Find Channel"
+    },
+    {
+      "info": "1",
+      "find": "📄𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬📄",
+      "storage": "1",
+      "varName": "commands_room",
+      "name": "Find Channel"
+    },
+    {
+      "info": "1",
+      "find": "🔴𝐑𝐮𝐥𝐞𝐬🔴",
+      "storage": "1",
+      "varName": "rules_room",
+      "name": "Find Channel"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "find": "𝐍𝐨 𝐇𝐨𝐩𝐞",
+      "storage": "1",
+      "varName": "simple_role",
+      "name": "Find Role"
+    },
+    {
+      "member": "2",
+      "varName2": "member",
+      "role": "3",
+      "varName": "simple_role",
+      "reason": "",
+      "name": "Add Member Role"
+    },
+    {
+      "title": "𝗪𝗲𝗹𝗰𝗼𝗺𝗲",
+      "author": "",
+      "color": "#1fff00",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"avatar\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Welcome in this server, let's see what you can find under the sea,\nfellow **${tempVars(\"name\")}**, or should i call you ${tempVars(\"name\")}-chan/san ?\nDon't forget to share your in-game name with us too. :wink:\n\nStart chatting here: ${tempVars(\"free_room\")}\nFor Bot Commands go here: ${tempVars(\"commands_room\")}\nAnd you find the rules here: ${tempVars(\"rules_room\")}\n\nFor verify your name use command: .verify ingamename",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "5",
+      "varName2": "welcome_room",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
