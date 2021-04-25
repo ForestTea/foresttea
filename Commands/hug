@@ -1,0 +1,188 @@
+
+{
+  "name": "hug",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "FyPKK",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "mentioned",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "tag2",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "4",
+      "iffalseVal": "no_mention",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "9",
+      "varName2": "",
+      "iftrue": "4",
+      "iftrueVal": "no_mention",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "code": "var myArray = [\n\"https://i.ibb.co/0hvH6jC/1.gif\",\n\"https://i.ibb.co/b1xJb7z/3.gif\",\n\"https://i.ibb.co/s9K1mr5/2.gif\",\n\"https://i.ibb.co/C5KgPM9/4.gif\",\n\"https://i.ibb.co/G9h1ZHm/5.gif\",\n\"https://i.ibb.co/0mJgqZd/7.gif\",\n\"https://i.ibb.co/99pZtfb/6.gif\",\n\"https://i.ibb.co/LSGzS0J/8.gif\",\n\"https://i.ibb.co/XFGX4b1/9.gif\",\n\"https://i.ibb.co/rs1Tt70/10.gif\",\n\"https://i.ibb.co/XtB9M59/11.gif\",\n\"https://i.ibb.co/3TqqMm4/13.gif\",\n\"https://i.ibb.co/fNjT73q/12.gif\",\n\"https://i.ibb.co/w6CVwbt/14.gif\",\n\"https://i.ibb.co/ChYCGLB/15.gif\",\n\"https://i.ibb.co/SRDQ5Z0/16.gif\",\n\"https://i.ibb.co/t4HxJRJ/17.gif\",\n\"https://i.ibb.co/BVQbd9S/18.gif\",\n\"https://i.ibb.co/nPKQr1q/20.gif\",\n\"https://i.ibb.co/WKHPQmr/19.gif\"\n];\n\nvar randomItem = myArray[Math.floor(Math.random()*myArray.length)];\n\nActions.storeValue(randomItem, 1, \"smth\", cache);",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "title": "**${tempVars(\"command\")}** hugged **${tempVars(\"mentioned\")}**",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "${tempVars(\"smth\")}",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "${tempVars(\"tag2\")} you just got a hug from ${tempVars(\"tag\")}.",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "no_mention",
+      "color": "#03da13",
+      "description": "If you mentioned yourself, or not mentioned anybody.",
+      "name": "Create Anchor"
+    },
+    {
+      "code": "var myArray = [\n\"https://i.ibb.co/xYpQJFp/tenor.gif\",\n\"https://media.tenor.com/images/50761385f1a246576981a1e272347eb9/tenor.gif\",\n\"https://media1.tenor.com/images/85b01109bec08e8c628f14ed26b579ac/tenor.gif\",\n\"https://media.tenor.com/images/ce8298b5e08bb6c2edd33d71ebea3222/tenor.gif\",\n\"https://media.tenor.com/images/057f653c0498cdb8b8fce987ef442467/tenor.gif\",\n\"https://media.tenor.com/images/515674266afd1b399921d99d9dd3a45d/tenor.gif\",\n\"https://media.tenor.com/images/73e7465c60233282e649757a5aff8251/tenor.gif\",\n\"https://media.tenor.com/images/1dae35691fd264c88d1a32178d0e0384/tenor.gif\",\n\"https://media.tenor.com/images/f8a0bd948469add594b7a03332eb3f33/tenor.gif\",\n\"https://media1.tenor.com/images/a31cf174105fcb01b1f8f857204c723e/tenor.gif\"\n];\n\nvar randomItem = myArray[Math.floor(Math.random()*myArray.length)];\n\nActions.storeValue(randomItem, 1, \"smth2\", cache);",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "title": "**${tempVars(\"command\")}** want a hug",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "${tempVars(\"smth2\")}",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "${tempVars(\"tag\")} could use some hug now.",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
