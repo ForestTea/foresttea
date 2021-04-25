@@ -1,0 +1,109 @@
+
+{
+  "name": "Edited Message",
+  "temp": "whatwas",
+  "event-type": "26",
+  "_id": "Goxlc",
+  "actions": [
+    {
+      "info": "1",
+      "find": "logs",
+      "storage": "1",
+      "varName": "log_room",
+      "name": "Find Channel"
+    },
+    {
+      "message": "1",
+      "varName": "whatwas",
+      "info": "3",
+      "storage": "1",
+      "varName2": "member2",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "2",
+      "varName": "member2",
+      "info": "21",
+      "storage": "1",
+      "varName2": "tagtag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member2",
+      "info": "3",
+      "storage": "1",
+      "varName2": "disp",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member2",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗴𝗼𝘁 𝗲𝗱𝗶𝘁𝗲𝗱",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "𝐎𝐫𝐢𝐠𝐢𝐧𝐚𝐥",
+      "message": "${tempVars(\"whatwas\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "𝐄𝐝𝐢𝐭𝐞𝐝",
+      "message": "${tempVars(\"whatbecame\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Edited by.: ${tempVars(\"disp\")} /=/ ${tempVars(\"tagtag\")}",
+      "footerIcon": "${tempVars(\"avatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "5",
+      "varName2": "log_room",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "temp2": "whatbecame"
+}
