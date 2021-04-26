@@ -1,0 +1,352 @@
+
+{
+  "name": "work",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "gDmSP",
+  "actions": [
+    {
+      "info": "1",
+      "find": "bot_commands",
+      "storage": "1",
+      "varName": "bot_room",
+      "name": "Find Channel"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "myname",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "euro.system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "euro",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "euro.system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "euro_own",
+      "name": "Store Member Data"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "money_time",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "2",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "4",
+      "iffalseVal": "no_cooldown",
+      "storage": "1",
+      "varName": "money_seconds",
+      "name": "Set Time Restriction"
+    },
+    {
+      "time": "${tempVars(\"money_seconds\")}",
+      "storage": "1",
+      "varName": "sec_to_date",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "code": "let str = tempVars('sec_to_date');\n \nconst smth = str.slice(3);\n\nActions.storeValue(smth, 1, \"no_day_time\", cache);",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "title": "𝗪𝗼𝗿𝗸 𝘁𝗶𝗺𝗲𝗿",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://i.dlpng.com/static/png/1618276-time-waste-png-high-quality-image-time-png-408_408_preview.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "work_timer",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "work_timer",
+      "message": "You still need to wait: **${tempVars(\"no_day_time\")}**\nbefore can work again.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "work_timer",
+      "message": "Command used by.: ${tempVars(\"myname\")}",
+      "footerIcon": "${tempVars(\"avatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "work_timer",
+      "channel": "5",
+      "varName2": "bot_room",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "nincs_forint_munka",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "no_cooldown",
+      "color": "#00ff00",
+      "description": "No cooldown, so we can work.",
+      "name": "Create Anchor"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "myname",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "name": "Create List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"help others around the house\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"bring me some little fish\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"play with me\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"sell my extra fishes in the shop\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"clear some ocean shells\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"cook some fish for us\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"bring me to the circus\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"give me a good massage\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"let's watch a movie together\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "work_list",
+      "addType": "0",
+      "position": "",
+      "value": "\"clear my garden\"",
+      "name": "Add Item to List"
+    },
+    {
+      "list": "7",
+      "varName": "work_list",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "work_random_get",
+      "name": "Get Item from List"
+    },
+    {
+      "storage": "1",
+      "varName": "working_hours",
+      "min": "1",
+      "max": "8",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "money_for_hour",
+      "min": "421",
+      "max": "1453",
+      "name": "Generate Random Number"
+    },
+    {
+      "FirstNumber": "${tempVars(\"working_hours\")}",
+      "info": "2",
+      "SecondNumber": "${tempVars(\"money_for_hour\")}",
+      "storage": "1",
+      "varName": "calculated_money",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "euro.system",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "euros",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"calculated_money\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"euros\")}",
+      "storage": "1",
+      "varName": "done_money",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "euro.system",
+      "changeType": "0",
+      "value": "tempVars(\"done_money\")",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "𝗬𝗼𝘂 𝗴𝗼 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗮𝗻𝗱...",
+      "author": "",
+      "color": "BLUE",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://img.icons8.com/clouds/2x/work.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Your job is now: **${tempVars(\"work_random_get\")}**.\n\n\nMoney you get for a hour: **${tempVars(\"money_for_hour\")}** :dollar:\nWorking hours: **${tempVars(\"working_hours\")}** hour.\nYour overall payment: **${tempVars(\"calculated_money\")}** :dollar:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Command used by.: ${tempVars(\"myname\")}",
+      "footerIcon": "${tempVars(\"avatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "5",
+      "varName2": "bot_room",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "0"
+}
