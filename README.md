@@ -31,6 +31,12 @@ Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/mai
 
 ( Don't forget renaming the embed titles and the command names too. 😉 )
 
+
+**Simple balance storage**
+1. Just get the following raw datas, and use the commands. You probably able to see how it works.
+[money](https://github.com/ForestTea/foresttea/blob/main/Commands/money) command is here, you can add money with [money.add](https://github.com/ForestTea/foresttea/blob/main/Commands/money.add), and remove money with [money.remove](https://github.com/ForestTea/foresttea/blob/main/Commands/money.remove)
+
+( Later maybe gona put here the work command to for able to get money. )
 <!--
 **ForestTea/foresttea** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
