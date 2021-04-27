@@ -2,7 +2,7 @@
 
 I'm mostly going to share my Discord Bot Maker RawData-s with those who want it. There's no reason keeping them for myself.
 
-But the most important : **For me all of this works. If it's not works for you, then download the latest mods for DBM.**
+But the most important : **For me all of this works. Download the latest mods for DBM, and update your modules too.**
 
 ( Or you probably need to buy the Discord Bot Maker. )
 Download the fresh action mods [from here](https://dbm-network.github.io/download-git/#/home?url=https:%2F%2Fgithub.com%2Fdbm-network%2Fmods%2Ftree%2Fmaster%2Factions)
