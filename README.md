@@ -43,4 +43,4 @@ Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/mai
 1. You need to install the [spacetime](https://www.npmjs.com/package/spacetime) and the [timezone-soft](https://www.npmjs.com/package/timezone-soft) modules into your bot project folder.
 2. Grab the [time](https://github.com/ForestTea/foresttea/blob/main/Commands/time) command from the folder, get the raw data, and add it to your commands.
 
-( Minimal UTC timezone is UTC-12 and the maximum is UTC+14, you can get the 0 with UTC+0 )
+( Minimal UTC timezone is UTC-12 and the maximum is UTC+14, you can get the 0 with UTC+0 ) [Picture](https://i.ibb.co/swQdK6K/image.png)
