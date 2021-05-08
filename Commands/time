@@ -1,0 +1,319 @@
+
+{
+  "name": "time",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "BTWkH",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "para",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "dispname",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "0",
+      "iftrue": "4",
+      "iftrueVal": "no_zone",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "0",
+      "comparison": "3",
+      "value": "2",
+      "iftrue": "4",
+      "iftrueVal": "invalid",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "storage": "1",
+      "varName": "para",
+      "comparison": "5",
+      "value": "\"UTC\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "4",
+      "iffalseVal": "invalid",
+      "name": "Check Variable"
+    },
+    {
+      "code": "let str = tempVars('para');\n\nif (!String.prototype.isInList) {\n  Object.defineProperty(String.prototype, 'isInList', {\n    get: () => function(...args) {\n      let value = this.valueOf();\n      for (let i = 0, l = args.length; i < l; i += 1) {\n        if (arguments[i] === value) return true;\n      }\n      return false;\n    }\n  });\n}\n\nconst miau = str.isInList(\"UTC+0\",\"UTC+1\",\"UTC+2\",\"UTC+3\",\"UTC+4\",\"UTC+5\",\"UTC+6\",\"UTC+7\",\"UTC+8\",\"UTC+9\",\"UTC+10\",\"UTC+11\",\"UTC+12\",\"UTC+13\",\"UTC+14\",\"UTC+15\",\"UTC-1\",\"UTC-2\",\"UTC-3\",\"UTC-4\",\"UTC-5\",\"UTC-6\",\"UTC-7\",\"UTC-8\",\"UTC-9\",\"UTC-10\",\"UTC-11\",\"UTC-12\");\nActions.storeValue(miau, 1, \"valami\", cache);",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "storage": "1",
+      "varName": "valami",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "valami2",
+      "name": "Convert Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "valami2",
+      "comparison": "1",
+      "value": "\"true\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "4",
+      "iffalseVal": "invalid",
+      "name": "Check Variable"
+    },
+    {
+      "code": "const spacetime = require('spacetime');\nconst soft = require('timezone-soft');\nconst para = tempVars('para');\n\nlet d = spacetime.now();\nconst goat = d.format('nice');\n\nlet b = spacetime.now(para);\nconst goat2 = b.format('nice');\n\nActions.storeValue(goat, 1, \"smth\", cache);\nActions.storeValue(goat2, 1, \"smth2\", cache);",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "title": "𝗧𝗶𝗺𝗲𝘇𝗼𝗻𝗲",
+      "author": "",
+      "color": "#a5ff33",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://freepikpsd.com/wp-content/uploads/2020/03/Time-Transparent-Background.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "Your current time:",
+      "message": "**${tempVars(\"smth\")}**",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "Your selected time:",
+      "message": "**${tempVars(\"smth2\")}** **${tempVars(\"para\")}**",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Time asked by.: ${tempVars(\"dispname\")}",
+      "footerIcon": "${tempVars(\"avatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "1",
+      "varName3": "msg2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "no_zone",
+      "color": "#ffff00",
+      "description": "You didn't choosed a timezone.",
+      "name": "Create Anchor"
+    },
+    {
+      "code": "const spacetime = require('spacetime');\nconst soft = require('timezone-soft');\nconst para = tempVars('para');\n\nlet d = spacetime.now();\nconst goat = d.format('nice');\n\nActions.storeValue(goat, 1, \"smth\", cache);",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "title": "𝗧𝗶𝗺𝗲𝘇𝗼𝗻𝗲",
+      "author": "",
+      "color": "#a5ff33",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://freepikpsd.com/wp-content/uploads/2020/03/Time-Transparent-Background.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "Your current time:",
+      "message": "**${tempVars(\"smth\")}**",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Time asked by.: ${tempVars(\"dispname\")}",
+      "footerIcon": "${tempVars(\"avatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "invalid",
+      "color": "#ff0000",
+      "description": "You used too many parameters",
+      "name": "Create Anchor"
+    },
+    {
+      "code": "const spacetime = require('spacetime');\nconst soft = require('timezone-soft');\nconst para = tempVars('para');\n\nlet d = spacetime.now();\nconst goat = d.format('nice');\n\nActions.storeValue(goat, 1, \"smth\", cache);",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "title": "𝗧𝗶𝗺𝗲𝘇𝗼𝗻𝗲",
+      "author": "",
+      "color": "#a5ff33",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://freepikpsd.com/wp-content/uploads/2020/03/Time-Transparent-Background.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "You used invalid input or gived invalid timezone.\nPlease use it like this: ```!time UTC+5```\n( Max = UTC+14 , Min = UTC-12 )",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "Your current time:",
+      "message": "**${tempVars(\"smth\")}**",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Time asked by.: ${tempVars(\"dispname\")}",
+      "footerIcon": "${tempVars(\"avatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ]
+}
