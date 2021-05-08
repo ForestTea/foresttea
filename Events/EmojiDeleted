@@ -1,0 +1,61 @@
+
+{
+  "name": "EmojiDeleted",
+  "temp": "emoji_name",
+  "event-type": "17",
+  "_id": "dmDEo",
+  "actions": [
+    {
+      "emoji": "1",
+      "varName": "emoji_name",
+      "info": "1",
+      "storage": "1",
+      "varName2": "maybe_animated",
+      "name": "Store Emoji Info"
+    },
+    {
+      "storage": "1",
+      "varName": "maybe_animated",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "string",
+      "name": "Convert Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "string",
+      "comparison": "1",
+      "value": "\"false\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "4",
+      "iffalseVal": "animated",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "still_emoji",
+      "changeType": "1",
+      "value": "-1",
+      "name": "Control Server Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "animated",
+      "color": "#00ff00",
+      "description": "The emoji is animated.",
+      "name": "Create Anchor"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "animated_emoji",
+      "changeType": "1",
+      "value": "-1",
+      "name": "Control Server Data"
+    }
+  ]
+}
