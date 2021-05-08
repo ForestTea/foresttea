@@ -44,3 +44,10 @@ Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/mai
 2. Grab the [time](https://github.com/ForestTea/foresttea/blob/main/Commands/time) command from the folder, get the raw data, and add it to your commands.
 
 ( Minimal UTC timezone is UTC-12 and the maximum is UTC+14, you can get the 0 with UTC+0 ) [Picture](https://i.ibb.co/swQdK6K/image.png)
+
+
+**Simple emoji counter with remaining slots**
+1. Get the events, so you can save the emojis differently from still to animated. [EmojiCreated](https://github.com/ForestTea/foresttea/blob/main/Events/EmojiCreated) and [EmojiDeleted](https://github.com/ForestTea/foresttea/blob/main/Events/EmojiDeleted)
+2. Get the [command](https://github.com/ForestTea/foresttea/blob/main/Commands/emojis) what list your emojis numbers with the remaining slots, differently with the server levels.
+
+( You need to create a command for add them manually, if already have emojis. After that it's automatic if the bot runs. )
