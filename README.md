@@ -50,4 +50,4 @@ Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/mai
 1. Get the events, so you can save the emojis differently from still to animated. [EmojiCreated](https://github.com/ForestTea/foresttea/blob/main/Events/EmojiCreated) and [EmojiDeleted](https://github.com/ForestTea/foresttea/blob/main/Events/EmojiDeleted)
 2. Get the [command](https://github.com/ForestTea/foresttea/blob/main/Commands/emojis) what list your emojis numbers with the remaining slots, differently with the server levels.
 
-( You need to create a command for add them manually, if already have emojis. After that it works good if the bot runs. )
+( You need to create a command for add them manually, if already have emojis on the server. Fresh server the best. )
