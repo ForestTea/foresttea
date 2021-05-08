@@ -1,0 +1,233 @@
+
+{
+  "name": "emojis",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Bgsdv",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "still_emoji",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "still",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "animated_emoji",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "animated",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "45",
+      "storage": "1",
+      "varName2": "tierrer",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "1",
+      "varName": "tierrer",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "tier",
+      "name": "Convert Variable"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "tier",
+      "comparison": "1",
+      "value": "0",
+      "iftrue": "4",
+      "iftrueVal": "tier_0",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "tier",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "4",
+      "iftrueVal": "tier_1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "tier",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "4",
+      "iftrueVal": "tier_2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "tier",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "4",
+      "iftrueVal": "tier_3",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "tier_0",
+      "color": "#00ffff",
+      "description": "Server level is tier 0.",
+      "name": "Create Anchor"
+    },
+    {
+      "FirstNumber": "50",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"still\")}",
+      "storage": "1",
+      "varName": "remaining1",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "50",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"animated\")}",
+      "storage": "1",
+      "varName": "remaining2",
+      "name": "Basic Math Operation"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Still emojis: **${tempVars(\"still\")} / 50**\nFree slots avaliable: **${tempVars(\"remaining1\")}**\n\nAnimated emojis: ${tempVars(\"animated\")} / 50\nFree slots avaliable: **${tempVars(\"remaining2\")}**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "tier_1",
+      "color": "#ffff00",
+      "description": "Server level is tier 1.",
+      "name": "Create Anchor"
+    },
+    {
+      "FirstNumber": "100",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"still\")}",
+      "storage": "1",
+      "varName": "remaining1",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "100",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"animated\")}",
+      "storage": "1",
+      "varName": "remaining2",
+      "name": "Basic Math Operation"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Still emojis: ${tempVars(\"still\")} / 100\nFree slots avaliable: **${tempVars(\"remaining1\")}**\n\nAnimated emojis: ${tempVars(\"animated\")} / 100\nFree slots avaliable: **${tempVars(\"remaining2\")}**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "tier_2",
+      "color": "#ff00ff",
+      "description": "Server level is tier 2.",
+      "name": "Create Anchor"
+    },
+    {
+      "FirstNumber": "150",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"still\")}",
+      "storage": "1",
+      "varName": "remaining1",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "150",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"animated\")}",
+      "storage": "1",
+      "varName": "remaining2",
+      "name": "Basic Math Operation"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Still emojis: ${tempVars(\"still\")} / 150\nFree slots avaliable: **${tempVars(\"remaining1\")}**\n\nAnimated emojis: ${tempVars(\"animated\")} / 150\nFree slots avaliable: **${tempVars(\"remaining2\")}**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "tier_3",
+      "color": "#00ff00",
+      "description": "Server level is tier 3.",
+      "name": "Create Anchor"
+    },
+    {
+      "FirstNumber": "250",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"still\")}",
+      "storage": "1",
+      "varName": "remaining1",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "250",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"animated\")}",
+      "storage": "1",
+      "varName": "remaining2",
+      "name": "Basic Math Operation"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Still emojis: ${tempVars(\"still\")} / 250\nFree slots avaliable: **${tempVars(\"remaining1\")}**\n\nAnimated emojis: ${tempVars(\"animated\")} / 250\nFree slots avaliable: **${tempVars(\"remaining2\")}**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
