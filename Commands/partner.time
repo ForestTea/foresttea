@@ -1,0 +1,4077 @@
+
+{
+  "name": "partner.time",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "uLEjy",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "euro.system",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "forint.system",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "kapcsolat.system",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "kapcspont.system",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "randipont.system",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "randipont.system",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "gyerekpont.system",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "nevem",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "képem",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "kapcsolat.system",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "2",
+      "iftrueVal": "14",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You don't have anyone to spend the time with.",
+      "storage": "1",
+      "varName2": "nincs_senkid",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "nincs_senkid",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Akeno Himejima\"",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Asuna\"",
+      "iftrue": "2",
+      "iftrueVal": "56",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Emilia\"",
+      "iftrue": "2",
+      "iftrueVal": "106",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Rem\"",
+      "iftrue": "2",
+      "iftrueVal": "149",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Rias Gremory\"",
+      "iftrue": "2",
+      "iftrueVal": "192",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Zero Two\"",
+      "iftrue": "2",
+      "iftrueVal": "236",
+      "iffalse": "2",
+      "iffalseVal": "278",
+      "name": "Check Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "akeno_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "3",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "25",
+      "storage": "1",
+      "varName": "${tempVars(\"akeno_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **3 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "akeno_alap",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "akeno_alap",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "31",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "akeno_alap",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "37",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "akeno_alap",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "44",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "akeno_alap",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "50",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+2",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akeno Himejima",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/f1qhTr9/akeno-sad.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **2** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akeno Himejima",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/yRXrv7K/akeno-extra.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **2** :revolving_hearts:\nKid points : **5** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+7",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akeno Himejima",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/qCGHsDK/akeno-normal.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **7** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akeno Himejima",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/LNRHhYT/akeno-angry.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "asuna_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "3",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "60",
+      "storage": "1",
+      "varName": "${tempVars(\"asuna_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **3 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "asuna_random",
+      "min": "1",
+      "max": "6",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "asuna_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "68",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "asuna_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "74",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "asuna_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "81",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "asuna_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "88",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "asuna_random",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "2",
+      "iftrueVal": "94",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "asuna_random",
+      "comparison": "1",
+      "value": "6",
+      "iftrue": "2",
+      "iftrueVal": "100",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Asuna",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/jgtxNY9/asuna-wtf.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Asuna",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/fCjQJDy/asuna-extra1.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **5** :baby_bottle:",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+7",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Asuna",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/9Y3Z2yj/asuna-extra2.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **7** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Asuna",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/djPvtdP/asuna-angry.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **1** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+2",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Asuna",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/tJDdXvg/asuna-sad.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **2** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Asuna",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/W3kgdSP/asuna-normal.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "emilia_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "4",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "110",
+      "storage": "1",
+      "varName": "${tempVars(\"emilia_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **4 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "emilia_random",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "emilia_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "117",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "emilia_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "123",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "emilia_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "129",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "emilia_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "135",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "emilia_random",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "2",
+      "iftrueVal": "142",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+2",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Emilia",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/h9jPSVd/emilia-sad.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **2** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Emilia",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/YL2hYML/emilia-angry.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **1** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Emilia",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/dgmyXHv/emilia-extra.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+40",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Emilia",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/tPPkMJs/emilia-extra2.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **40** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "euro.system",
+      "changeType": "1",
+      "value": "+20000",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Emilia",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/L1Y9dWH/emilia-happy.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:\nMoney : **20.000** :dollar:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "rem_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "2",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "153",
+      "storage": "1",
+      "varName": "${tempVars(\"rem_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **2 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "rem_random",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "rem_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "160",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rem_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "167",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rem_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "174",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rem_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "180",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rem_random",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "2",
+      "iftrueVal": "186",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+10",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+50",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rem",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/cwSVmTC/rem-extra.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **10** :revolving_hearts:\nKid points : **50** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "randipont.system",
+      "changeType": "1",
+      "value": "+10",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rem",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/kc4fYXt/rem-happy.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **2** :revolving_hearts:\nKid points : **5** :baby_bottle:\nDate points : **10** :heartpulse:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rem",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/N3jXD6y/rem-merges.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rem",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/TR87Y0D/rem-szomoru.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **1** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rem",
+      "author": "Rem",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/FncGQX2/rem-wtf.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "rias_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "4",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "196",
+      "storage": "1",
+      "varName": "${tempVars(\"rias_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **4 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "rias_random",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "rias_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "203",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rias_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "209",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rias_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "216",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rias_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "223",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "rias_random",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "2",
+      "iftrueVal": "230",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rias Gremory",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/CJMbCNn/rias-angry.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **1** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rias Gremory",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/BzS0LJJ/rias-extra1.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **3** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+8",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rias Gremory",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/ZJFV8dL/rias-extra3.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **8** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+8",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+2",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rias Gremory",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/yN3jzLr/rias-extra4.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **8** :revolving_hearts:\nKid points : **2** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Rias Gremory",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/M5hbDXs/rias-normal.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "zerotwo_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "2",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "240",
+      "storage": "1",
+      "varName": "${tempVars(\"zerotwo_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **2 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "zerotwo_random",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "zerotwo_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "247",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "zerotwo_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "253",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "zerotwo_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "260",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "zerotwo_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "266",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "zerotwo_random",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "2",
+      "iftrueVal": "272",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+7",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Zero Two",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/2S0K4sc/zero-two-boldog.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **7** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+15",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Zero Two",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/QK5L78n/zero-two-extra.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **15** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Zero Two",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/jZfysXr/zero-two-merges.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Zero Two",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/WfZKMph/zero-two-sad.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **1** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Zero Two",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#ff003e",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/LQ7JVVC/zero-two-vicces.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Gray\"",
+      "iftrue": "2",
+      "iftrueVal": "285",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Ichigo\"",
+      "iftrue": "2",
+      "iftrueVal": "320",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Issei\"",
+      "iftrue": "2",
+      "iftrueVal": "355",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Kazuto\"",
+      "iftrue": "2",
+      "iftrueVal": "391",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Sasuke\"",
+      "iftrue": "2",
+      "iftrueVal": "427",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcsolat.system",
+      "comparison": "1",
+      "value": "\"Akashi\"",
+      "iftrue": "2",
+      "iftrueVal": "464",
+      "iffalse": "0",
+      "iffalseVal": "278",
+      "name": "Check Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "gray_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "3",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "298",
+      "storage": "1",
+      "varName": "${tempVars(\"gray_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **3 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "grey_alap",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "grey_alap",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "295",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "grey_alap",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "301",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "grey_alap",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "308",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "grey_alap",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "314",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Gray",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/3zV3m7X/gray-angry.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Gray",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/PYN63mC/gray-extra.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **5** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+7",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Gray",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/1mYdDNz/gray-smth.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **7** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Gray",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/f1q9P4M/gray-sad.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "ichigo_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "4",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "324",
+      "storage": "1",
+      "varName": "${tempVars(\"ichigo_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **4 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "ichigo_random",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "ichigo_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "330",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "ichigo_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "337",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "ichigo_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "343",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "ichigo_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "349",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+7",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Ichigo",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/y0vgH1M/ichigo-extra.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **7** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Ichigo",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/r2BV8pC/ichigo-angry.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **1** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Ichigo",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/P12KHDY/ichigo-happy.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Ichigo",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/ZRQZ639/ichigo-smth.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "issei_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "3",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "359",
+      "storage": "1",
+      "varName": "${tempVars(\"issei_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **3 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "issei_random",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "issei_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "365",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "issei_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "371",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "issei_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "377",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "issei_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "384",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+2",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Issei",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/p4vR1T3/issei-sad.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **2** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Issei",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/J3nm3Vn/issei-happy.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+15",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Issei",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/LhJGm1k/issei-extra2.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **15** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+15",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Issei",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/BtmTscV/issei-extra1.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:\nKid points : **15** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "kazuto_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "2",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "395",
+      "storage": "1",
+      "varName": "${tempVars(\"kazuto_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **2 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "kazuto_random",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "kazuto_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "401",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "kazuto_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "408",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "kazuto_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "415",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "kazuto_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "421",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+10",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+30",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Kazuto",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/G9n0N84/kazuto-extra.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **10** :revolving_hearts:\nKid points : **30** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "randipont.system",
+      "changeType": "1",
+      "value": "+10",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Kazuto",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/DwH2cwD/kirito-eat.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:\nDate points : **10** :heartpulse:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Kazuto",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/6NtXhH9/kazuto-angry.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Kazuto",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/pdGVmHn/kazuto-happy.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "sasuke_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "2",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "431",
+      "storage": "1",
+      "varName": "${tempVars(\"sasuke_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **2 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "sasuke_random",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "sasuke_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "437",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "sasuke_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "444",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "sasuke_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "451",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "sasuke_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "458",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+30",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Sasuke",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/0QrjBX2/sasuke-extra.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **30** :baby_bottle:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "randipont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Sasuke",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/31bP4Ts/sasuke-thinking.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nDate points : **3** :heartpulse:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+8",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "randipont.system",
+      "changeType": "1",
+      "value": "+2",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Sasuke",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/1q2XwpZ/sasuke-sport.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **8** :revolving_hearts:\nDate points : **2** :heartpulse:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+3",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Sasuke",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/d6v64FR/sasuke-angry.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **3** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "type": "3",
+      "storage": "1",
+      "varName": "akashi_idő",
+      "name": "Store Time Info"
+    },
+    {
+      "measurement": "3",
+      "value": "4",
+      "save": "0",
+      "restrict": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "468",
+      "storage": "1",
+      "varName": "${tempVars(\"akashi_idő\")}",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"kapcsolat.system\")} only like the meetings every **4 hour**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "akashi_random",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "akashi_random",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "474",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "akashi_random",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "480",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "akashi_random",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "487",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "akashi_random",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "2",
+      "iftrueVal": "493",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akashi",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/BZ31b2K/akashi-traning.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+5",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "gyerekpont.system",
+      "changeType": "1",
+      "value": "+30",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akashi",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/jTmMFNr/akashi-extra1.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **5** :revolving_hearts:\nKid points : **30** :heartpulse:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+4",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akashi",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/8YC2fR7/akashi-smth.jpg",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **4** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "kapcspont.system",
+      "changeType": "1",
+      "value": "+2",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Akashi",
+      "author": "${tempVars(\"kapcsolat.system\")}",
+      "color": "#111be5",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "https://i.ibb.co/Rzhmvbt/akashi-thinking.png",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "üzenet",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "message": "From this time spending you received:\n\nLink points : **2** :revolving_hearts:",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "üzenet",
+      "channel": "1",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"nevem\")}** spended time with **${tempVars(\"kapcsolat.system\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
