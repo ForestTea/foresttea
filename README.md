@@ -44,6 +44,7 @@ Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/mai
 2. Grab the [time](https://github.com/ForestTea/foresttea/blob/main/Commands/time) command from the folder, get the raw data, and add it to your commands.
 
 ( Minimal UTC timezone is UTC-12 and the maximum is UTC+14, you can get the 0 with UTC+0 ) [Picture](https://i.ibb.co/swQdK6K/image.png)
+( Or try out this [action](https://github.com/ForestTea/foresttea/blob/main/actions/current_utc_time_MOD.js) what give you a selected timezone what you choosing [Picture](https://i.ibb.co/5swYQv1/image.png),[Picture](https://i.ibb.co/f9HqQgd/image.png).
 
 
 **Simple emoji counter with remaining slots**
