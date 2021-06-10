@@ -1,6 +1,6 @@
 
 {
-  "name": "NextMusic",
+  "name": "NewMusic",
   "temp": "musicstart",
   "event-type": "On Audio End",
   "_id": "jUJsj",
@@ -38,6 +38,14 @@
     },
     {
       "server": "0",
+      "info": "9",
+      "storage": "1",
+      "varName": "songurl",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
       "info": "14",
       "storage": "1",
       "varName": "duration",
@@ -49,6 +57,22 @@
       "info": "1",
       "storage": "1",
       "varName": "length",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "11",
+      "storage": "1",
+      "varName": "req",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "5",
+      "storage": "1",
+      "varName": "quuuu",
       "varName2": "",
       "name": "Store Audio Info"
     },
@@ -88,8 +112,32 @@
     {
       "storage": "1",
       "varName": "msg",
-      "message": "**${tempVars(\"title\")}**\n\n**// Now Playing //**\nSong duration : **${tempVars(\"duration\")}**",
+      "message": "[${tempVars(\"title\")}](${tempVars(\"songurl\")})",
       "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "Requester:",
+      "message": "*${tempVars(\"req\")}*",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "Queue:",
+      "message": "*${tempVars(\"quuuu\")+1}*",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "fieldName": "Duration:",
+      "message": "*${tempVars(\"duration\")}*",
+      "inline": "0",
+      "name": "Add Embed Field"
     },
     {
       "storage": "1",
