@@ -21,6 +21,14 @@
       "name": "Store Member Info"
     },
     {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
       "condition": "0",
       "comparison": "4",
       "value": "0",
@@ -198,7 +206,7 @@
     {
       "channel": "5",
       "varName": "bot_channel",
-      "message": "🔎 **Searching for your song...**\n",
+      "message": " **Searching for your song...** \n",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
@@ -242,11 +250,35 @@
       "name": "Play YouTube Video"
     },
     {
+      "server": "0",
+      "info": "14",
+      "storage": "1",
+      "varName": "durtime",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "9",
+      "storage": "1",
+      "varName": "urls",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "11",
+      "storage": "1",
+      "varName": "reqs",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
       "title": "▶️ I Found your song!",
       "author": "",
       "color": "RANDOM",
       "url": "",
-      "authorIcon": "",
+      "authorIcon": "${tempVars(\"avatar\")}",
       "authorUrl": "",
       "imageUrl": "",
       "thumbUrl": "${tempVars(\"thumbnail\")}",
@@ -264,16 +296,34 @@
       "name": "Create Embed Message"
     },
     {
-      "time": "${tempVars(\"duration\")}",
       "storage": "1",
-      "varName": "time_left",
-      "name": "Convert Seconds To D/H/M/S"
+      "varName": "embed",
+      "message": "[${tempVars(\"title\")}](${tempVars(\"urls\")})",
+      "name": "Set Embed Description"
     },
     {
       "storage": "1",
       "varName": "embed",
-      "message": "**${tempVars(\"title\")}**\n\nI found your song! **${tempVars(\"name\")}**\nIn the queue : **// Now Playing // **\nSong duration : **${tempVars(\"time_left\")}**",
-      "name": "Set Embed Description"
+      "fieldName": "Requester:",
+      "message": "${tempVars(\"reqs\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Queue:",
+      "message": "*Now Playing*",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Duration:",
+      "message": "*${tempVars(\"durtime\")}*",
+      "inline": "0",
+      "name": "Add Embed Field"
     },
     {
       "storage": "1",
@@ -380,7 +430,7 @@
       "author": "",
       "color": "RANDOM",
       "url": "",
-      "authorIcon": "",
+      "authorIcon": "${tempVars(\"avatar\")}",
       "authorUrl": "",
       "imageUrl": "",
       "thumbUrl": "${tempVars(\"thumbnail\")}",
@@ -400,8 +450,16 @@
     {
       "storage": "1",
       "varName": "embed",
-      "message": "**${tempVars(\"title\")}**\nIn the queue: **${serverVars(\"already_playing\")+1}**",
+      "message": "[${tempVars(\"title\")}](https://www.youtube.com/watch?v=${tempVars(\"url1\")})",
       "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Queue:",
+      "message": "*${serverVars(\"already_playing\")+1}*",
+      "inline": "0",
+      "name": "Add Embed Field"
     },
     {
       "storage": "1",
