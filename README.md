@@ -13,15 +13,21 @@ Download the fresh event mods [from here](https://dbm-network.github.io/download
 
 
 **Music commands/event**
-1. You need to have the latest mods. ( The actions and events folder. )
-2. You need to install the [scrape-yt](https://www.npmjs.com/package/scrape-yt),[ytdl-core](https://www.npmjs.com/package/ytdl-core) module into your bot project folder.
-3. In your Discord Bot Maker program, go to the top left and [install FFMPEG](https://i.ibb.co/rFNLxS3/install-FFMPEG.png) and [update Music Libraries](https://i.ibb.co/f2mKX2Y/update-musiclibraries.png).
-4. Now you can collect the raw data for the commands, and for the events. ( Don't forget restarting your bot. )
-5. The play command using a text channel called : *bot_commands* : so create one, or edit that actions.
+0. Get this [database](https://github.com/ForestTea/foresttea/blob/main/Events/DatabaseConnect) event, and connect to your database.
+1. If you don't know how, then just install the [sqlite3](https://www.npmjs.com/package/sqlite3) module, and download the [database](https://github.com/ForestTea/foresttea/blob/main/private.db)
+2. As you can see, you need to put this database file inside your [Main Discord Bot Project Folder](https://i.ibb.co/K7Bg98Z/image.png)
+3. You need to have the latest mods. ( The actions and events folder. )
+4. You need to install the [scrape-yt](https://www.npmjs.com/package/scrape-yt),[ytdl-core](https://www.npmjs.com/package/ytdl-core) module into your bot project folder.
+5. In your Discord Bot Maker program, go to the top left and [install FFMPEG](https://i.ibb.co/rFNLxS3/install-FFMPEG.png) and [update Music Libraries](https://i.ibb.co/f2mKX2Y/update-musiclibraries.png).
+6. Now you can collect the raw data for the commands, and for the events. ( Don't forget restarting your bot. )
+7. The play command using a text channel called : *bot_commands* : so create one, or edit that actions.
+8. Maybe i'm forgot some module what you need, if that's a problem, just see in the console what module you need, and install it.
 
 Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/play)
 Skip command: [skip](https://github.com/ForestTea/foresttea/blob/main/Commands/skip)
+Queue command: [queue](https://github.com/ForestTea/foresttea/blob/main/Commands/queue)
 Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/main/Events/NewMusic)
+Updating the database queue event: [QueueRefresh](https://github.com/ForestTea/foresttea/blob/main/Events/QueueRefresh)
 
 
 **Interactions with members**
