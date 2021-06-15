@@ -23,7 +23,7 @@ Download the fresh event mods [from here](https://dbm-network.github.io/download
 6. Now you can collect the raw data for the commands, and for the events. ( Don't forget restarting your bot. )
 7. The play command using a text channel called : *bot_commands* : so create one, or edit that actions.
 8. Maybe i'm forgot some module what you need, if that's a problem, just see in the console what module you need, and install it.
-9. In case if you find some error with the QUEUE command, or your bot suddently crashed, etc and don't know how to edit database, then use this [fix_queue](https://github.com/ForestTea/foresttea/blob/main/Commands/fix_queue) command. This command deletting everything from the youtube database part.
+9. In case if you find some error with the QUEUE command, or your bot suddently crashed, etc and don't know how to edit database, then use this [fix_queue](https://github.com/ForestTea/foresttea/blob/main/Commands/fix_queue) command. This command deletting everything from the youtube database part. (Yes i know can put it inside initialization too. :P )
 10. Put one [Welcome] event like this inside your events. [Picture from the event](https://i.ibb.co/T8p92pK/image.png) not hard doing it, so good luck.
 
 Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/play)
