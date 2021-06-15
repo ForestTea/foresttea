@@ -13,6 +13,7 @@ Download the fresh event mods [from here](https://dbm-network.github.io/download
 
 
 **Music commands/event**
+
 0. Get this [database](https://github.com/ForestTea/foresttea/blob/main/Events/DatabaseConnect) event, and connect to your database.
 1. If you don't know how, then just install the [sqlite3](https://www.npmjs.com/package/sqlite3) module, and download the [database](https://github.com/ForestTea/foresttea/blob/main/private.db)
 2. As you can see, you need to put this database file inside your [Main Discord Bot Project Folder](https://i.ibb.co/K7Bg98Z/image.png)
