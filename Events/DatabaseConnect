@@ -1,0 +1,33 @@
+
+{
+  "name": "DatabaseConnect",
+  "temp": "",
+  "event-type": "1",
+  "_id": "IjuqZ",
+  "actions": [
+    {
+      "storage": "0",
+      "stringifyOutput": "0",
+      "varName": "",
+      "hostname": "",
+      "port": "",
+      "username": "",
+      "password": "",
+      "database": "./private.db",
+      "query": "",
+      "path": "",
+      "otype": "3",
+      "source_conn_storage": "0",
+      "source_conn_varName": "",
+      "store_source_conn_storage": "2",
+      "store_source_conn_varName": "Database",
+      "debugMode": "1",
+      "name": "Run SQL Query"
+    },
+    {
+      "storage": "2",
+      "varName": "Database",
+      "name": "Save Variable"
+    }
+  ]
+}
