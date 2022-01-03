@@ -1,4 +1,3 @@
-
 {
   "name": "play",
   "permissions": "NONE",
@@ -13,23 +12,182 @@
       "name": "Find Channel"
     },
     {
-      "storage": "0",
-      "stringifyOutput": "0",
+      "info": "0",
+      "find": "923510613358051358",
+      "storage": "1",
+      "varName": "room_for_music",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "yt_second_msg_id",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "2",
+      "iftrueVal": "9",
+      "iffalse": "0",
+      "iffalseVal": "9",
+      "name": "Check Variable"
+    },
+    {
+      "title": "embed",
+      "author": "",
+      "color": "",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "once_msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "once_msg",
+      "channel": "5",
+      "varName2": "room_for_music",
+      "storage3": "2",
+      "varName3": "yt_second_msg",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "message": "2",
+      "varName": "yt_second_msg",
+      "info": "1",
+      "storage": "2",
+      "varName2": "yt_second_msg_id",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "2",
+      "varName": "yt_second_msg",
+      "name": "Save Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "yt_second_msg_id",
+      "name": "Save Variable"
+    },
+    {
+      "channel": "3",
+      "varName": "room_for_music",
+      "info": "1",
+      "storage": "1",
+      "varName2": "music_room_id",
+      "name": "Store Channel Info"
+    },
+    {
+      "message": "0",
       "varName": "",
-      "hostname": "",
-      "port": "",
-      "username": "",
-      "password": "",
-      "database": "",
-      "query": "CREATE TABLE IF NOT EXISTS youtube (ID INTEGER PRIMARY KEY, Link INTEGER, Title INTEGER UNIQUE);",
-      "path": "",
-      "otype": "0",
-      "source_conn_storage": "2",
-      "source_conn_varName": "Database",
-      "store_source_conn_storage": "0",
-      "store_source_conn_varName": "",
-      "debugMode": "1",
-      "name": "Run SQL Query"
+      "info": "4",
+      "storage": "1",
+      "varName2": "message_channel",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "message_text",
+      "name": "Store Message Info"
+    },
+    {
+      "channel": "3",
+      "varName": "message_channel",
+      "info": "1",
+      "storage": "1",
+      "varName2": "messaged_channel_id",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "music_room_id",
+      "comparison": "1",
+      "value": "tempVars(\"messaged_channel_id\")",
+      "iftrue": "0",
+      "iftrueVal": "link_test",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "code": "var chattext = `${tempVars(\"message_text\")}`;\nif(chattext.includes(\"www.\")) {\n    cache.index = cache.index +1;\n Actions.callNextAction(cache);\n}\nelse{\n cache.index = cache.index +4;\n Actions.callNextAction(cache);\n}",
+      "behavior": "1",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "code": "var chattext = `${tempVars(\"message_text\")}`;\nif(chattext.includes(\"www.youtube.com\")) {\n cache.index = cache.index +2;\n Actions.callNextAction(cache);\n}\nelse{\nconsole.log('This is not a youtube link!');\n}",
+      "behavior": "1",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "link_test",
+      "color": "#00ff00",
+      "description": "Jumping here.",
+      "name": "Create Anchor"
+    },
+    {
+      "code": "var chattext = `${tempVars(\"message_text\")}`;\nif(chattext.includes(\"list=\")) {\n Actions.callNextAction(cache);\n}\nelse{\ncache.index = cache.index +2;\nActions.callNextAction(cache);\n}",
+      "behavior": "1",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "description": "Jumping to the playlist section.",
+      "jump_to_anchor": "playlist",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "name": "End Action Sequence"
     },
     {
       "member": "1",
@@ -48,22 +206,12 @@
       "name": "Store Member Info"
     },
     {
-      "condition": "0",
-      "comparison": "4",
-      "value": "0",
-      "iftrue": "4",
-      "iftrueVal": "0",
-      "iffalse": "0",
-      "iffalseVal": "test_queue",
-      "name": "Check Parameters"
-    },
-    {
       "member": "1",
       "varName": "",
       "info": "4",
       "varName2": "",
       "iftrue": "4",
-      "iftrueVal": "test_queue",
+      "iftrueVal": "command_use",
       "iffalse": "4",
       "iffalseVal": "no_voice",
       "name": "Check If Member"
@@ -73,7 +221,7 @@
     },
     {
       "anchor_id": "no_voice",
-      "color": "#00ff00",
+      "color": "#ff0000",
       "description": "You are not in the voice channel",
       "name": "Create Anchor"
     },
@@ -102,150 +250,30 @@
       "name": "End Action Sequence"
     },
     {
-      "anchor_id": "0",
-      "color": "#00ff00",
-      "description": "You are not sayd anything after the play command",
-      "name": "Create Anchor"
-    },
-    {
-      "server": "0",
-      "info": "13",
-      "storage": "1",
-      "varName": "playing_now",
-      "varName2": "",
-      "name": "Store Audio Info"
-    },
-    {
-      "server": "0",
-      "info": "14",
-      "storage": "1",
-      "varName": "current_time",
-      "varName2": "",
-      "name": "Store Audio Info"
-    },
-    {
-      "storage": "1",
-      "varName": "playing_now",
-      "comparison": "0",
-      "value": "",
-      "iftrue": "0",
-      "iftrueVal": "",
-      "iffalse": "3",
-      "iffalseVal": "3",
-      "name": "Check Variable"
-    },
-    {
-      "channel": "5",
-      "varName": "bot_channel",
-      "message": "Right now we playing : **${tempVars(\"playing_now\")}**",
-      "storage": "0",
-      "varName2": "",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Send Message"
-    },
-    {
-      "storage": "0",
-      "varName": "",
-      "reason": "",
-      "name": "Delete Message"
-    },
-    {
       "name": "End Action Sequence"
     },
     {
-      "channel": "5",
-      "varName": "bot_channel",
-      "message": "**${tempVars(\"name\")}** please name or link the music, like \"Baby Shark Song\".",
-      "storage": "0",
-      "varName2": "",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Send Message"
-    },
-    {
-      "storage": "0",
-      "varName": "",
-      "reason": "",
-      "name": "Delete Message"
-    },
-    {
-      "name": "End Action Sequence"
-    },
-    {
-      "anchor_id": "test_queue",
-      "color": "#00ff00",
-      "description": "If a music already playing, putting in the queue.",
-      "name": "Create Anchor"
-    },
-    {
-      "server": "0",
-      "info": "1",
-      "storage": "1",
-      "varName": "bot_play",
-      "varName2": "",
-      "name": "Store Audio Info"
-    },
-    {
-      "storage": "1",
-      "varName": "bot_play",
-      "comparison": "0",
-      "value": "1000",
-      "iftrue": "4",
-      "iftrueVal": "Queue",
-      "iffalse": "4",
-      "iffalseVal": "In_Voice",
-      "name": "Check Variable"
-    },
-    {
-      "storage": "0",
-      "varName": "",
-      "reason": "",
-      "name": "Delete Message"
-    },
-    {
-      "name": "End Action Sequence"
-    },
-    {
-      "name": "End Action Sequence"
-    },
-    {
-      "anchor_id": "In_Voice",
+      "anchor_id": "command_use",
       "color": "#00ff40",
       "description": "If you in voice channel, the command continue.",
       "name": "Create Anchor"
     },
     {
       "info": "1",
-      "infoIndex": "1",
+      "infoIndex": "0",
       "storage": "1",
       "varName": "title/link",
       "name": "Store Command Params"
     },
     {
-      "channel": "5",
-      "varName": "bot_channel",
-      "message": " **Searching for your song...** \n",
-      "storage": "0",
-      "varName2": "",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Send Message"
-    },
-    {
-      "code": "const scrapeYt = require(\"scrape-yt\");\nscrapeYt.search(`${tempVars(\"title/link\")}`, {\n    type: \"video\"\n}).then(videos => {\n    console.log(videos[0]);\n\n  Actions.storeValue(videos[0].id, 1, \"url1\", cache);\n  Actions.storeValue(videos[0].title, 1, \"title\", cache);\n  Actions.storeValue(videos[0].thumbnail, 1, \"thumbnail\", cache);\n  Actions.storeValue(videos[0].duration, 1, \"duration\", cache);\n});",
-      "behavior": "0",
+      "code": "const { Client } = require(\"youtubei\");\nconst scrapeYt = new Client();\nvar videos;\nscrapeYt.search(`${tempVars(\"title/link\")}`, {\n    type: \"video\"\n}).then ( message => {\n    videos = message;\n    \n   try {\n        console.log(videos[0].id);\n          Actions.storeValue(videos[0].id, 1, \"url1\", cache);\n          Actions.callNextAction(cache);\n    }\n    catch (err) {\n        console.log(\"Something went wrong.\");\n    }\n});",
+      "behavior": "1",
       "interpretation": "1",
       "storage": "0",
       "varName": "",
       "VTypeSelect": "0",
       "CVTypeValue": "",
       "name": "Run Script"
-    },
-    {
-      "time": "1",
-      "measurement": "1",
-      "name": "Wait"
     },
     {
       "iftrue": "3",
@@ -260,107 +288,26 @@
       "name": "Join Voice Channel"
     },
     {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
       "url": "https://www.youtube.com/watch?v=${tempVars(\"url1\")}",
       "seek": "0",
       "volume": "",
       "passes": "1",
       "bitrate": "",
       "type": "0",
+      "quality": "highestaudio",
       "name": "Play YouTube Video"
     },
     {
-      "server": "0",
-      "info": "14",
-      "storage": "1",
-      "varName": "durtime",
-      "varName2": "",
-      "name": "Store Audio Info"
-    },
-    {
-      "server": "0",
-      "info": "9",
-      "storage": "1",
-      "varName": "urls",
-      "varName2": "",
-      "name": "Store Audio Info"
-    },
-    {
-      "server": "0",
-      "info": "11",
-      "storage": "1",
-      "varName": "reqs",
-      "varName2": "",
-      "name": "Store Audio Info"
-    },
-    {
-      "title": "▶️ I Found your song!",
-      "author": "",
-      "color": "RANDOM",
-      "url": "",
-      "authorIcon": "${tempVars(\"avatar\")}",
-      "authorUrl": "",
-      "imageUrl": "",
-      "thumbUrl": "${tempVars(\"thumbnail\")}",
-      "timestamp": "false",
-      "debug": "false",
-      "text": "",
-      "year": "",
-      "month": "",
-      "day": "",
-      "hour": "",
-      "minute": "",
-      "second": "",
-      "storage": "1",
-      "varName": "embed",
-      "name": "Create Embed Message"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "message": "[${tempVars(\"title\")}](${tempVars(\"urls\")})",
-      "name": "Set Embed Description"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Requester:",
-      "message": "${tempVars(\"reqs\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Queue:",
-      "message": "*Now Playing*",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Duration:",
-      "message": "*${tempVars(\"durtime\")}*",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "channel": "5",
-      "varName2": "bot_channel",
-      "storage3": "0",
-      "varName3": "nowplaying",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "messageContent": "",
-      "name": "Send Embed Message"
-    },
-    {
-      "storage": "0",
-      "varName": "",
-      "reason": "",
-      "name": "Delete Message"
+      "sourcetype": "0",
+      "source": "IQifK",
+      "source2": "",
+      "type": "true",
+      "name": "Call Command/Event"
     },
     {
       "name": "End Action Sequence"
@@ -369,86 +316,27 @@
       "name": "End Action Sequence"
     },
     {
-      "anchor_id": "Queue",
+      "anchor_id": "playlist",
       "color": "#00ff00",
-      "description": "Different writing for the queue.",
+      "description": "Here is the playlist.",
       "name": "Create Anchor"
     },
     {
       "info": "1",
-      "infoIndex": "1",
+      "infoIndex": "0",
       "storage": "1",
       "varName": "title/link",
       "name": "Store Command Params"
     },
     {
-      "channel": "5",
-      "varName": "bot_channel",
-      "message": "🎶 **Adding your song to the queue...**\n",
-      "storage": "0",
-      "varName2": "",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Send Message"
-    },
-    {
-      "code": "const scrapeYt = require(\"scrape-yt\");\nscrapeYt.search(`${tempVars(\"title/link\")}`, {\n    type: \"video\"\n}).then(videos => {\n    console.log(videos[0]);\n\n  Actions.storeValue(videos[0].id, 1, \"url1\", cache);\n  Actions.storeValue(videos[0].title, 1, \"title\", cache);\n  Actions.storeValue(videos[0].thumbnail, 1, \"thumbnail\", cache);\n  Actions.storeValue(videos[0].duration, 1, \"duration\", cache);\n});",
-      "behavior": "0",
+      "code": "const { Client } = require(\"youtubei\");\nconst scrapeYt = new Client();\nvar videos;\nscrapeYt.search(`${tempVars(\"title/link\")}`, {\n    type: \"playlist\"\n}).then ( playlist => {\n    videos = playlist;\n    \n   try {\n        console.log(videos[0].id);\n          Actions.storeValue(videos[0].id, 1, \"url1\", cache);\n          Actions.callNextAction(cache);\n    }\n    catch (err) {\n        console.log(\"Something went wrong.\");\n    }\n});",
+      "behavior": "1",
       "interpretation": "1",
       "storage": "0",
       "varName": "",
       "VTypeSelect": "0",
       "CVTypeValue": "",
       "name": "Run Script"
-    },
-    {
-      "time": "1",
-      "measurement": "1",
-      "name": "Wait"
-    },
-    {
-      "server": "0",
-      "info": "5",
-      "storage": "2",
-      "varName": "already_playing",
-      "varName2": "",
-      "name": "Store Audio Info"
-    },
-    {
-      "FirstNumber": "${serverVars(\"already_playing\")}",
-      "info": "0",
-      "SecondNumber": "1",
-      "storage": "1",
-      "varName": "Que",
-      "name": "Basic Math Operation"
-    },
-    {
-      "storage": "0",
-      "stringifyOutput": "0",
-      "varName": "",
-      "hostname": "",
-      "port": "",
-      "username": "",
-      "password": "",
-      "database": "",
-      "query": "INSERT INTO youtube (ID, Link, Title)\nVALUES ('${tempVars(\"Que\")}', '${tempVars(\"url1\")}', '${tempVars(\"title\")}')\n",
-      "path": "",
-      "otype": "0",
-      "source_conn_storage": "2",
-      "source_conn_varName": "Database",
-      "store_source_conn_storage": "0",
-      "store_source_conn_varName": "",
-      "debugMode": "0",
-      "name": "Run SQL Query"
-    },
-    {
-      "server": "0",
-      "varName": "",
-      "dataName": "${serverVars(\"already_playing\")}",
-      "defaultVal": "0",
-      "storage": "2",
-      "varName2": "music_list",
-      "name": "Store Server Data"
     },
     {
       "iftrue": "3",
@@ -463,70 +351,38 @@
       "name": "Join Voice Channel"
     },
     {
-      "url": "https://www.youtube.com/watch?v=${tempVars(\"url1\")}",
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=${tempVars(\"url1\")}",
       "seek": "0",
       "volume": "",
       "passes": "1",
       "bitrate": "",
-      "type": "0",
-      "name": "Play YouTube Video"
+      "maxvid": "",
+      "quality": "highestaudio",
+      "name": "Play YouTube Playlist"
     },
     {
-      "title": "🎧 Song added to the queue!",
-      "author": "",
-      "color": "RANDOM",
-      "url": "",
-      "authorIcon": "${tempVars(\"avatar\")}",
-      "authorUrl": "",
-      "imageUrl": "",
-      "thumbUrl": "${tempVars(\"thumbnail\")}",
-      "timestamp": "false",
-      "debug": "false",
-      "text": "",
-      "year": "",
-      "month": "",
-      "day": "",
-      "hour": "",
-      "minute": "",
-      "second": "",
-      "storage": "1",
-      "varName": "embed",
-      "name": "Create Embed Message"
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
     },
     {
-      "storage": "1",
-      "varName": "embed",
-      "message": "[${tempVars(\"title\")}](https://www.youtube.com/watch?v=${tempVars(\"url1\")})",
-      "name": "Set Embed Description"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "fieldName": "Queue:",
-      "message": "*${serverVars(\"already_playing\")+1}*",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "channel": "5",
-      "varName2": "bot_channel",
-      "storage3": "0",
-      "varName3": "nowplaying",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "messageContent": "",
-      "name": "Send Embed Message"
+      "sourcetype": "0",
+      "source": "IQifK",
+      "source2": "",
+      "type": "true",
+      "name": "Call Command/Event"
     },
     {
       "name": "End Action Sequence"
     },
     {
-      "storage": "0",
-      "varName": "",
-      "reason": "",
-      "name": "Delete Message"
+      "name": "End Action Sequence"
     }
-  ]
+  ],
+  "comType": "3"
 }
