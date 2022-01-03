@@ -24,12 +24,12 @@ DISCORD BOT MAKER 1.6 (ONLY)
 8. Put one [Welcome](https://i.ibb.co/T8p92pK/image.png) event like this inside your events.
 9. You need to change the [Find Custom Emoji] to your own emoji ID/name inside your events.
 10. Newest actions for 1.6: [play_youtube.js](https://github.com/dbm-network/mods/blob/old_version_v1.6/actions/play_youtube.js),[play_youtube_playlist_MOD](https://github.com/dbm-network/mods/blob/old_version_v1.6/actions/play_youtube_playlist_MOD.js)... and many [more](https://github.com/dbm-network/mods/tree/old_version_v1.6/actions).
+11. ( When the music ended, you still get the reactions in the message tho. )
 
 Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/play)
 MusicChannel: [MusicChannel](https://github.com/ForestTea/foresttea/blob/main/Events/MusicChannel.js)
 MusicChannelEnded: [MusicChannelEnded](https://github.com/ForestTea/foresttea/blob/main/Events/MusicChannelEnded.js)
 MusicButtons: [MusicButtons](https://github.com/ForestTea/foresttea/blob/main/Events/MusicButtons.js)
-( When the music ended, you still get the reactions in the message tho. )
 ![Example](https://media4.giphy.com/media/ImY7a5j9rQI9CRtdL4/giphy.gif?cid=790b7611796327d96ae36d626d3080a30618d6a9a86593b8&rid=giphy.gif)
 
 
