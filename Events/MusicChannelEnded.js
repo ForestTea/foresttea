@@ -20,6 +20,20 @@
       "name": "Find Channel"
     },
     {
+      "info": "0",
+      "find": "924738164097159228",
+      "storage": "1",
+      "varName": "stop_button",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "0",
+      "find": "924738924868415548",
+      "storage": "1",
+      "varName": "skip_button",
+      "name": "Find Custom Emoji"
+    },
+    {
       "channel": "3",
       "varName": "bot_room",
       "info": "0",
