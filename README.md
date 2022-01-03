@@ -29,6 +29,8 @@ Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/p
 MusicChannel: [MusicChannel](https://github.com/ForestTea/foresttea/blob/main/Events/MusicChannel.js)
 MusicChannelEnded: [MusicChannelEnded](https://github.com/ForestTea/foresttea/blob/main/Events/MusicChannelEnded.js)
 MusicButtons: [MusicButtons](https://github.com/ForestTea/foresttea/blob/main/Events/MusicButtons.js)
+![Example](https://media4.giphy.com/media/ImY7a5j9rQI9CRtdL4/giphy.gif?cid=790b7611796327d96ae36d626d3080a30618d6a9a86593b8&rid=giphy.gif)
+
 
 **Interactions with members**
 1. Just go to the [hug](https://github.com/ForestTea/foresttea/blob/main/Commands/hug) and copy raw data, create new command in your DBM, and edit raw data and paste it.
