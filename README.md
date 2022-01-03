@@ -14,24 +14,20 @@ DISCORD BOT MAKER 1.6 (ONLY)
 
 **Music commands/event**
 
-0. Get this [database](https://github.com/ForestTea/foresttea/blob/main/Events/DatabaseConnect) event, and connect to your database.
-1. If you don't know how, then just install the [sqlite3](https://www.npmjs.com/package/sqlite3) module, and download the [database](https://github.com/ForestTea/foresttea/blob/main/private.db)
-2. As you can see, you need to put this database file inside your [Main Discord Bot Project Folder](https://i.ibb.co/K7Bg98Z/image.png)
-3. You need to have the latest mods. ( The actions and events folder. )
-4. You need to install the [scrape-yt](https://www.npmjs.com/package/scrape-yt),[ytdl-core](https://www.npmjs.com/package/ytdl-core) module into your bot project folder.
-5. In your Discord Bot Maker program, go to the top left and [install FFMPEG](https://i.ibb.co/rFNLxS3/install-FFMPEG.png) and [update Music Libraries](https://i.ibb.co/f2mKX2Y/update-musiclibraries.png).
-6. Now you can collect the raw data for the commands, and for the events. ( Don't forget restarting your bot. )
-7. The play command using a text channel called : *bot_commands* : so create one, or edit that actions.
-8. Maybe i'm forgot some module what you need, if that's a problem, just see in the console what module you need, and install it.
-9. In case if you find some error with the QUEUE command, or your bot suddently crashed, etc and don't know how to edit database, then use this [fix_queue](https://github.com/ForestTea/foresttea/blob/main/Commands/fix_queue) command. This command deletting everything from the youtube database part. (Yes i know can put it inside initialization too, and even more, but not from me. :P )
-10. Put one [Welcome] event like this inside your events. [Picture from the event](https://i.ibb.co/T8p92pK/image.png) not hard doing it, so good luck.
-11. Newest actions : [youtube_info_MOD](https://github.com/dbm-network/mods/blob/master/actions/youtube_info_MOD.js),[youtube_search_MOD](https://github.com/dbm-network/mods/blob/master/actions/youtube_search_MOD.js),[store_audio_info_MOD](https://github.com/dbm-network/mods/blob/master/actions/store_audio_info_MOD.js), Or just search them [here](https://github.com/dbm-network/mods/tree/master/actions).
+1. You need to have the latest mods for [1.6 Mods](https://github.com/dbm-network/mods/tree/old_version_v1.6) ( The actions and events folder. )
+2. You need to install the [youtubei](https://www.npmjs.com/package/youtubei),[ytdl-core](https://www.npmjs.com/package/ytdl-core) module into your bot project folder.
+3. In your Discord Bot Maker program, go to the top left and [install FFMPEG](https://i.ibb.co/rFNLxS3/install-FFMPEG.png) and [update Music Libraries](https://i.ibb.co/f2mKX2Y/update-musiclibraries.png).
+4. Now you can collect the raw data for the commands, and for the events. ( Don't forget restarting your bot. )
+5. You need to change the [Find Channel] to your [channel ID] and to your [channel Name].
+6. Maybe i'm forgot some module what you need, if that's a problem, just see in the console what module you need, and install it.
+7. You don't really need to do anything else, just change the [ Channel ID ] in the events too to your own [channel name/id].
+8. Put one [Welcome](https://i.ibb.co/T8p92pK/image.png) event like this inside your events.
+9. You need to change the [Find Custom Emoji] to your own emoji ID/name inside your events.
+10. Newest actions : [youtube_info_MOD](https://github.com/dbm-network/mods/blob/master/actions/youtube_info_MOD.js),[youtube_search_MOD](https://github.com/dbm-network/mods/blob/master/actions/youtube_search_MOD.js),[store_audio_info_MOD](https://github.com/dbm-network/mods/blob/master/actions/store_audio_info_MOD.js), Or just search them [here](https://github.com/dbm-network/mods/tree/master/actions).
 
 Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/play)
-Skip command: [skip](https://github.com/ForestTea/foresttea/blob/main/Commands/skip)
-Queue command: [queue](https://github.com/ForestTea/foresttea/blob/main/Commands/queue)
-Auto next song event: [NewMusic](https://github.com/ForestTea/foresttea/blob/main/Events/NewMusic)
-Updating the database queue event: [QueueRefresh](https://github.com/ForestTea/foresttea/blob/main/Events/QueueRefresh)
+MusicChannel: [NewMusic](https://github.com/ForestTea/foresttea/blob/main/Events/NewMusic)
+MusicChannelEnded: [QueueRefresh](https://github.com/ForestTea/foresttea/blob/main/Events/QueueRefresh)
 
 
 **Interactions with members**
