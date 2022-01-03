@@ -23,7 +23,7 @@ DISCORD BOT MAKER 1.6 (ONLY)
 7. You don't really need to do anything else, just change the [ Channel ID ] in the events too to your own [channel name/id].
 8. Put one [Welcome](https://i.ibb.co/T8p92pK/image.png) event like this inside your events.
 9. You need to change the [Find Custom Emoji] to your own emoji ID/name inside your events.
-10. Newest actions : [youtube_info_MOD](https://github.com/dbm-network/mods/blob/master/actions/youtube_info_MOD.js),[youtube_search_MOD](https://github.com/dbm-network/mods/blob/master/actions/youtube_search_MOD.js),[store_audio_info_MOD](https://github.com/dbm-network/mods/blob/master/actions/store_audio_info_MOD.js), Or just search them [here](https://github.com/dbm-network/mods/tree/master/actions).
+10. Newest actions for 1.6: [play_youtube.js](https://github.com/dbm-network/mods/blob/old_version_v1.6/actions/play_youtube.js),[play_youtube_playlist_MOD](https://github.com/dbm-network/mods/blob/old_version_v1.6/actions/play_youtube_playlist_MOD.js)... and many [more](https://github.com/dbm-network/mods/tree/old_version_v1.6/actions).
 
 Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/play)
 MusicChannel: [NewMusic](https://github.com/ForestTea/foresttea/blob/main/Events/NewMusic)
