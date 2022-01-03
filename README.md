@@ -26,9 +26,9 @@ DISCORD BOT MAKER 1.6 (ONLY)
 10. Newest actions for 1.6: [play_youtube.js](https://github.com/dbm-network/mods/blob/old_version_v1.6/actions/play_youtube.js),[play_youtube_playlist_MOD](https://github.com/dbm-network/mods/blob/old_version_v1.6/actions/play_youtube_playlist_MOD.js)... and many [more](https://github.com/dbm-network/mods/tree/old_version_v1.6/actions).
 
 Play command: [play](https://github.com/ForestTea/foresttea/blob/main/Commands/play)
-MusicChannel: [NewMusic](https://github.com/ForestTea/foresttea/blob/main/Events/NewMusic)
-MusicChannelEnded: [QueueRefresh](https://github.com/ForestTea/foresttea/blob/main/Events/QueueRefresh)
-
+MusicChannel: [MusicChannel](https://github.com/ForestTea/foresttea/blob/main/Events/MusicChannel.js)
+MusicChannelEnded: [MusicChannelEnded](https://github.com/ForestTea/foresttea/blob/main/Events/MusicChannelEnded.js)
+MusicButtons: [MusicButtons](https://github.com/ForestTea/foresttea/blob/main/Events/MusicButtons.js)
 
 **Interactions with members**
 1. Just go to the [hug](https://github.com/ForestTea/foresttea/blob/main/Commands/hug) and copy raw data, create new command in your DBM, and edit raw data and paste it.
