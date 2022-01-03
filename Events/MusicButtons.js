@@ -1,4 +1,3 @@
-
 {
   "name": "MusicButtons",
   "temp": "reaction",
@@ -58,13 +57,6 @@
       "storage": "1",
       "varName2": "last_user",
       "name": "Store Reaction Info"
-    },
-    {
-      "reaction": "1",
-      "varName": "reaction",
-      "member": "2",
-      "varName2": "last_user",
-      "name": "Remove Reaction"
     },
     {
       "member": "2",
@@ -190,6 +182,13 @@
       "color": "#ff0000",
       "description": "Want to stop the whole music bot.",
       "name": "Create Anchor"
+    },
+    {
+      "reaction": "1",
+      "varName": "reaction",
+      "member": "2",
+      "varName2": "last_user",
+      "name": "Remove Reaction"
     },
     {
       "member": "2",
